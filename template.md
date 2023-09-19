@@ -19,6 +19,11 @@ library(tidyverse)
     ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
 ``` r
+library(readxl)
+library(haven)
+```
+
+``` r
 litters_df <- 
   read_csv("data/FAS_litters.csv")
 ```
@@ -174,4 +179,20 @@ litters_df <-
              cols(
                `GD0 weight` = col_character()
              ))
+```
+
+## Other file types
+
+Import a xlsx file first.
+
+``` r
+mlb_df <- 
+  read_excel("data/mlb11.xlsx")
+```
+
+Import a SAS file
+
+``` r
+pulse_df <- 
+  read_sas("data/public_pulse_data.sas7bdat")
 ```
