@@ -1,7 +1,42 @@
 ---
 title: "Simple document"
-output: html_document
+output: github_document
 ---
+
+Import the `FAS_litters.csv` csv using a relative path.
+
+```{r}
+library(tidyverse)
+```
+
+
+
+```{r}
+litters_df <- 
+  read_csv("data/FAS_litters.csv")
+
+litters_df = 
+  janitor::clean_names(litters_df)
+
+
+```
+
+import the same data set using an absolute path
+
+```{r, eval=FALSE}
+litters_df_abs <- 
+  read_csv("~/P8105 Data Science I/data_wrangling_i/data/FAS_litters.csv")
+```
+
+
+
+```{r}
+
+```
+
+
+
+
 
 
 
