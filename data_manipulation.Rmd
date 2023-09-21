@@ -66,7 +66,28 @@ pull(litters_df, group) # returns a vector
 ```
 
 
+## `filter`
 
+get rid of rows using `filter()`
+
+```{r}
+filter(litters_df, group == "Con7")
+
+filter(litters_df, gd0_weight > 20)
+
+filter(litters_df, group == "Con7" | group == "Con8")
+
+filter(litters_df, group %in% c("Con7", "Con8"))
+
+filter(litters_df, !(group == "Con7"))
+
+filter(litters_df, group %in% c("Con7", "Con8"), gd0_weight > 20)
+```
+
+
+```{r}
+
+```
 
 
 
